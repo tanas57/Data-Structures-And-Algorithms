@@ -1,22 +1,20 @@
 public class CountingSort {
 	
 	// 3 adet dizi olacak
-	// 1si sıralanmamış hali, birisi sıralanmış hali
-	// biriside sayılardan kaç adet olduğunu sayan dizi
+	// 1si sÄ±ralanmamÄ±ÅŸ hali, birisi sÄ±ralanmÄ±ÅŸ hali
+	// biriside sayÄ±lardan kaÃ§ adet olduÄŸunu sayan dizi
 	
-	// fonsiyonun aldığı değerler (sıralancak dizi, dizi boyutu, dizideki en büyük eleman)
+	// fonsiyonun aldÄ±ÄŸÄ± deÄŸerler (sÄ±ralancak dizi, dizi boyutu, dizideki en bÃ¼yÃ¼k eleman)
 	public int[] sort(int[] array,int n, int bigger)
 	{
 		int[] sorted = new int[n];
-		int[] count = new int[bigger + 1]; // en büyük sayı kadar uzunlukta dizi açtık
-		for(int i = 1; i <= n; i++) {count[array[i]] = count[array[i]] + 1; System.out.print(count[i] + " "); }//  sayılardan kaçar tane var saydık
-		System.out.println();
-		for(int i = 1; i <= bigger; i++) {count[i] = count[i] + count[i - 1]; System.out.print(count[i] + " "); } // sayının hangi indise geleceğini hesaplıyor
-		System.out.println();
+		int[] count = new int[bigger + 1]; // en bÃ¼yÃ¼k sayÄ± kadar uzunlukta dizi aÃ§tÄ±k
+		for(int i = 1; i <= n; i++) count[array[i]] = count[array[i]] + 1; //  sayÄ±lardan kaÃ§ar tane var saydÄ±k
+		for(int i = 1; i <= bigger; i++) count[i] = count[i] + count[i - 1]; // sayÄ±nÄ±n hangi indise geleceÄŸini hesaplÄ±yor
 		for(int i = n; i >= 0; i--)
 		{
-			// sayılmış sayıları, sondan başlayarak başa doğru yazdırıyoruz.
-			sorted[count[array[i]] - 1] = array[i]; // neden -1 derseniz, 0.indisten başlamak için
+			// sayÄ±lmÄ±ÅŸ sayÄ±larÄ±, sondan baÅŸlayarak baÅŸa doÄŸru yazdÄ±rÄ±yoruz.
+			sorted[count[array[i]] - 1] = array[i]; // neden -1 derseniz, 0.indisten baÅŸlamak iÃ§in
 			count[array[i]] = count[array[i]] - 1; 
 		}
 		return sorted;
