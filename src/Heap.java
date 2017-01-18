@@ -25,8 +25,8 @@ public class Heap {
 	{
 		n = array.length-1;
 		
-		heapify(array); // O(n) tüm diziyi düzenle
-		// tüm sort işlemi => O(n log(n))
+		heapify(array); // O(n) tÃ¼m diziyi dÃ¼zenle
+		// tÃ¼m sort iÅŸlemi => O(n log(n))
 		
 		for(int i = n; i >= 0; i --)
 		{
@@ -46,24 +46,24 @@ public class Heap {
 	
 	private void heap(int [] array, int i)
 	{
-		int left = left(i); // şuanki indisin sol çocuğu
-		int right= right(i);// şuanki indisin sağ çocuğunun indisi
-		int largest = i;    // kendisini büyükmüş gibi görüyoruz
+		int left = left(i); // ÅŸuanki indisin sol Ã§ocuÄŸu
+		int right= right(i);// ÅŸuanki indisin saÄŸ Ã§ocuÄŸunun indisi
+		int largest = i;    // kendisini bÃ¼yÃ¼kmÃ¼ÅŸ gibi gÃ¶rÃ¼yoruz
 		
-		if((left <= n) && (array[left] > array[largest]) ) // sol çocuğu büyükse en büyük sol oluyor
+		if((left <= n) && (array[left] > array[largest]) ) // sol Ã§ocuÄŸu bÃ¼yÃ¼kse en bÃ¼yÃ¼k sol oluyor
 		largest = left;
 		
-		if((right <= n) && (array[right] > array[largest]) ) // sağ ile büyüğü karşılaştırıyoruz
-			largest = right; // büyükse en büyük sağ çocuk oluyor
+		if((right <= n) && (array[right] > array[largest]) ) // saÄŸ ile bÃ¼yÃ¼ÄŸÃ¼ karÅŸÄ±laÅŸtÄ±rÄ±yoruz
+			largest = right; // bÃ¼yÃ¼kse en bÃ¼yÃ¼k saÄŸ Ã§ocuk oluyor
 		
-		if(largest != i) // iki indis aynı olana kadar
+		if(largest != i) // iki indis aynÄ± olana kadar
 		{
-			// indisler arası değiştirme, swap işlemi yapıyoruz
+			// indisler arasÄ± deÄŸiÅŸtirme, swap iÅŸlemi yapÄ±yoruz
 			int temp = array[i];
 			array[i] = array[largest];
 			array[largest] = temp;
 			
-			heap(array,largest); // değiştirilen indisleri kontrol ediyoruz
+			heap(array,largest); // deÄŸiÅŸtirilen indisleri kontrol ediyoruz
 		}
 	}
 	
@@ -76,12 +76,12 @@ public class Heap {
 	{
 		Heap h = new Heap();
 		int[] array = {1,67,41,66,123,71,5,3,7,9,99};
-		System.out.println("Sıralanmamış hali");
+		System.out.println("SÄ±ralanmamÄ±ÅŸ hali");
 		h.print(array);
 		
-		h.sort(array); // sırala
+		h.sort(array); // sÄ±rala
 		
-		System.out.println("\nSıralanmış hali");
+		System.out.println("\nSÄ±ralanmÄ±ÅŸ hali");
 		h.print(array);
 		System.out.println("\nMaksimum : " + h.maximum(array));
 		System.out.println("Minimum  : " + h.minimum(array));

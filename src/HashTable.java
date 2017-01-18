@@ -8,7 +8,6 @@ HashTable()
 	table = new HashNode[TABLE_SIZE];
 	for(byte i = 0; i < TABLE_SIZE; i++) table[i] = null;
 }
-//http://www.algolist.net/Data_structures/Hash_table/Simple_example
 private int Hash(int key)
 {
 	return (((379 * key + 5) % TABLE_SIZE) * 179 ) % TABLE_SIZE;
@@ -45,12 +44,12 @@ public static void main(String [] args)
 	HashTable table = new HashTable();
 	// first, is identity  for each people
 	table.add(6616, "Tayyip", "Muslu", 'm');
-	table.add(3131, "Fatih", "Yýlmaz", 'm');
+	table.add(3131, "Fatih", "YÄ±lmaz", 'm');
 	table.add(12367, "Sevil", "Muslu", 'f');
-	table.add(7712, "Kübra", "Yýlmaz", 'f');
-	table.add(413, "Koray", "Güneþ", 'm');
+	table.add(7712, "KÃ¼bra", "YÄ±lmaz", 'f');
+	table.add(413, "Koray", "GÃ¼neÅŸ", 'm');
 	table.add(6616, "Deneme", "Kekee", 'm'); // rehash
-	table.add(7712, "Deneme2", "Yýlmaz", 'f');
+	table.add(7712, "Deneme2", "YÄ±lmaz", 'f');
 	System.out.println();
 	table.print();
 }

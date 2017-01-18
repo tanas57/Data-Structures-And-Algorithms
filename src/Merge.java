@@ -2,9 +2,9 @@
 
 public class Merge {
 /*
- * böl sırala birleştir.
- * girilen dizi yarıya bölünür taa ki tek elemana kadar.
- * ardından sıralanarak birleştirilir
+ * bÃ¶l sÄ±rala birleÅŸtir.
+ * girilen dizi yarÄ±ya bÃ¶lÃ¼nÃ¼r taa ki tek elemana kadar.
+ * ardÄ±ndan sÄ±ralanarak birleÅŸtirilir
  */
 	private int[] array;
     private int[] temp;
@@ -28,26 +28,26 @@ public class Merge {
     }
     private void Merge(int left, int right, int center)
     {
-        for (int i = left; i <= right; i++) temp[i] = array[i]; // işlem yapılacak aralık geçici diziye atılır
-        int a = left; // dizinin başlangıç noktası
-        int b = center + 1; // bölüm noktası + 1 sağ kısmın başlangıç indisi
-        int c = left; // değiştirilen parçanın indisi
-        while(a <= center && b <= right) // sol kısım ortaya, diğer kısım bitişe gelene kadar
+        for (int i = left; i <= right; i++) temp[i] = array[i]; // iÅŸlem yapÄ±lacak aralÄ±k geÃ§ici diziye atÄ±lÄ±r
+        int a = left; // dizinin baÅŸlangÄ±Ã§ noktasÄ±
+        int b = center + 1; // bÃ¶lÃ¼m noktasÄ± + 1 saÄŸ kÄ±smÄ±n baÅŸlangÄ±Ã§ indisi
+        int c = left; // deÄŸiÅŸtirilen parÃ§anÄ±n indisi
+        while(a <= center && b <= right) // sol kÄ±sÄ±m ortaya, diÄŸer kÄ±sÄ±m bitiÅŸe gelene kadar
         {
-        	// sağ ve sol parçaların değerini karşılaştır
-            if(temp[a] <= temp[b]) // küçükse eşit ise sol kısımdaki gelir.
+        	// saÄŸ ve sol parÃ§alarÄ±n deÄŸerini karÅŸÄ±laÅŸtÄ±r
+            if(temp[a] <= temp[b]) // kÃ¼Ã§Ã¼kse eÅŸit ise sol kÄ±sÄ±mdaki gelir.
             {
                 array[c] = temp[a]; 
-                a++; // bir sonraki indisler için 
+                a++; // bir sonraki indisler iÃ§in 
             }
             else
             {
-                array[c] = temp[b]; // büyük ise sağ kısım ile yer değiştirir.
-                b++; // bir sonraki indisler için
+                array[c] = temp[b]; // bÃ¼yÃ¼k ise saÄŸ kÄ±sÄ±m ile yer deÄŸiÅŸtirir.
+                b++; // bir sonraki indisler iÃ§in
             }
-            c++; // diğer indise geç
+            c++; // diÄŸer indise geÃ§
         }
-        while(a <= center) // işlem görmemiş kısımları orta noktaya gelene kadar array'a aktarıyoruz
+        while(a <= center) // iÅŸlem gÃ¶rmemiÅŸ kÄ±sÄ±mlarÄ± orta noktaya gelene kadar array'a aktarÄ±yoruz
         {
             array[c] = temp[a];
             c++;

@@ -35,8 +35,8 @@ public class BST {
 				else insert(r.left,n);
 			}
 			else
-			{ // sağa
-				if(r.right == null) // en sağa geldik
+			{ // saÄŸa
+				if(r.right == null) // en saÄŸa geldik
 				{
 					r.right = n;
 					n.parent = r.right;
@@ -50,7 +50,7 @@ public class BST {
 	{
 		boolean control = search(root, k);
 		if(control) System.out.println("Bulundu");
-		else System.out.println("Bulunamadı");
+		else System.out.println("BulunamadÄ±");
 	}
 	
 	private boolean search(Node r, int k)
@@ -68,7 +68,7 @@ public class BST {
 	{
 		System.out.println(max(root));
 	}
-	// en büyük değer için ağacın en sağına gideriz
+	// en bÃ¼yÃ¼k deÄŸer iÃ§in aÄŸacÄ±n en saÄŸÄ±na gideriz
 	private int max(Node r)
 	{
 		if(r!=null)
@@ -82,7 +82,7 @@ public class BST {
 	{
 		System.out.println(min(root));
 	}
-	// en küçük değer için ağacın en soluna gideriz
+	// en kÃ¼Ã§Ã¼k deÄŸer iÃ§in aÄŸacÄ±n en soluna gideriz
 	private int min(Node r)
 	{
 		if(r!=null)

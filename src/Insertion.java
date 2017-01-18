@@ -3,12 +3,12 @@
 public class Insertion {
 	public void Sort(int[] nums){
 /*
- * İkinci elemandan başlıyıp, bir eksiğini karşılaştırıyoruz.
- * Değiştirilen yerde tekrar başa dönüp karşılaştırıyoruz
- * (insert sort) performansı O(n2)’dir. Bunun sebebi dizideki eleman sayısı 
- * kadar geçiş gerekmesi ve her geçişte en kötü ihtimalle elemsan sayısı 
- * kadar kaydırma gerekmesidir. Yani insertion sort’un en kötü durumu 
- * tersten sıralı bir listedir.
+ * Ä°kinci elemandan baÅŸlÄ±yÄ±p, bir eksiÄŸini karÅŸÄ±laÅŸtÄ±rÄ±yoruz.
+ * DeÄŸiÅŸtirilen yerde tekrar baÅŸa dÃ¶nÃ¼p karÅŸÄ±laÅŸtÄ±rÄ±yoruz
+ * (insert sort) performansÄ± O(n2)â€™dir. Bunun sebebi dizideki eleman sayÄ±sÄ± 
+ * kadar geÃ§iÅŸ gerekmesi ve her geÃ§iÅŸte en kÃ¶tÃ¼ ihtimalle elemsan sayÄ±sÄ± 
+ * kadar kaydÄ±rma gerekmesidir. Yani insertion sortâ€™un en kÃ¶tÃ¼ durumu 
+ * tersten sÄ±ralÄ± bir listedir.
  * 
  */
 	int temp = 0;

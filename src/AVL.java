@@ -19,37 +19,37 @@ public class AVL {
 
 	public void insert(int key)
 	{
-		Node n = new Node(key); // yeni node oluşturduk
+		Node n = new Node(key); // yeni node oluÅŸturduk
 		insert(root,n); // recursive fonksiyona gidiyoruz.
 	}
 	
 	private void insert(Node r, Node n)
 	{
-		if(r == null) // kök boş ise elemanı kök yapıyoruz.
+		if(r == null) // kÃ¶k boÅŸ ise elemanÄ± kÃ¶k yapÄ±yoruz.
 		{
 			root = n;
 		}
 		else{
-			// kök boş değilse, eğer kökten küçükse sol'a, değilse sağ çocuga ekleyeceğiz
+			// kÃ¶k boÅŸ deÄŸilse, eÄŸer kÃ¶kten kÃ¼Ã§Ã¼kse sol'a, deÄŸilse saÄŸ Ã§ocuga ekleyeceÄŸiz
 			if(r.data > n.data) // sol
 			{
-				if(r.left == null) // boş olana kadar recursive olarak geziyoruz.
-				{  // çocuklar arası bağlantı yapıldı
+				if(r.left == null) // boÅŸ olana kadar recursive olarak geziyoruz.
+				{  // Ã§ocuklar arasÄ± baÄŸlantÄ± yapÄ±ldÄ±
 					n.parent = r;
 					r.left = n;
 				}
 				else insert(r.left,n);
 			}
-			else{ // sağ
+			else{ // saÄŸ
 				if(r.right == null)
-				{   // çocuklar arası bağlantı yapıldı
+				{   // Ã§ocuklar arasÄ± baÄŸlantÄ± yapÄ±ldÄ±
 					n.parent = r;
 					r.right = n;
 				}
 				else insert(r.right,n);
 			}
 		}
-		// balance kontrolü
+		// balance kontrolÃ¼
 		balance(n);
 	}
 

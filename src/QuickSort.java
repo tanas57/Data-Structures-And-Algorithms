@@ -12,17 +12,17 @@ public class QuickSort {
 	
 	private int partition(int[] array, int left, int right)
 	{
-		int a = left; // sol başlangıc indisi
-		int b = right; // bitiş indisi
-		int pivot = array[(left + right) / 2]; // pivotu dizinin ortası olarak belirliyoruz
+		int a = left; // sol baÅŸlangÄ±c indisi
+		int b = right; // bitiÅŸ indisi
+		int pivot = array[(left + right) / 2]; // pivotu dizinin ortasÄ± olarak belirliyoruz
 		int temp;
 		
-		while( a <= b ) // parça bitene kadar
+		while( a <= b ) // parÃ§a bitene kadar
 		{
-			while(array[a] < pivot) a++; // pivottan küçükleri say
-			while(array[b] > pivot) b--; // piottan büyükleri say
+			while(array[a] < pivot) a++; // pivottan kÃ¼Ã§Ã¼kleri say
+			while(array[b] > pivot) b--; // piottan bÃ¼yÃ¼kleri say
 			if( a <= b )
-			{   // küçükler ile büyükleri yer değiştirelim
+			{   // kÃ¼Ã§Ã¼kler ile bÃ¼yÃ¼kleri yer deÄŸiÅŸtirelim
 				temp = array[a]; 
 				array[a] = array[b];
 				array[b] = temp;

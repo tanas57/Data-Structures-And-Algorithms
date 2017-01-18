@@ -12,12 +12,12 @@ public class insertion_sort {
 	private void Sort(int[] nums){
 	int temp = 0;
 	int lenght = nums.length;
-		for(int i = 1; i < lenght; i++) // 1den baþlayarak dizinin sonuna kadar devam et
+		for(int i = 1; i < lenght; i++) // 1den baÅŸlayarak dizinin sonuna kadar devam et
 		{
-			if(nums[i] < nums[i-1]) // büyük ile küçüðü deðiþtir ve tekrar indis 1 e git.
+			if(nums[i] < nums[i-1]) // bÃ¼yÃ¼k ile kÃ¼Ã§Ã¼ÄŸÃ¼ deÄŸiÅŸtir ve tekrar indis 1 e git.
 			{
-				temp = nums[i]; // dizide indisler arasý deðiþiklik olacaðýndan
-				nums[i] = nums[i-1]; // temp adýnda bir deðiþkene ihtiyaç duyarýz.
+				temp = nums[i]; // dizide indisler arasÄ± deÄŸiÅŸiklik olacaÄŸÄ±ndan
+				nums[i] = nums[i-1]; // temp adÄ±nda bir deÄŸiÅŸkene ihtiyaÃ§ duyarÄ±z.
 				nums[i-1] = temp;
 				i = 1;
 			}
